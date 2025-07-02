@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar Medicação</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Adicionar Medicamento</h1>
+  <form action="" method="post">
+    <label>Nome:</label><input type="text" name="name" required>
+    <label>Dosagem:</label><input type="text" name="dosage">
+    <label>Horário:</label><input type="time" name="time" required>
+    <button type="submit">Salvar</button>
+  </form>
+  <a href="{{ url_for('index') }}">⟵ Voltar</a>
+</body>
+</html>

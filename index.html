@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MedTime Web</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Meus Lembretes</h1>
+  <a href="{{ url_for('add') }}" class="btn">Adicionar Medicamento</a>
+  <table>
+    <tr><th>Nome</th><th>Dosagem</th><th>Horário</th></tr>
+    {% for med in meds %}
+    <tr><td>{{ med['Nome Remédio'] }}</td><td>{{ med['dosagem'] }}</td><td>{{ med['Horário'] }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
